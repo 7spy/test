@@ -25,7 +25,7 @@ def run():
     report = os.path.join(reportPath, reportName)
 
     # 发送邮件
-    sendEmail.email(report)
+    #sendEmail.email(report)
 
 
 if __name__ == "__main__":

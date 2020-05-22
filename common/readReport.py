@@ -16,6 +16,7 @@ def writeResult(reportPath, writeFile):
 
     for test in ["testAll", "testPass", "testFail", "testSkip", "beginTime", "totalTime"]:
         value = re.findall("\"%s\": (.+)," % test, reportContent)[0]
+        print(value)
         if re.match("\D+", value):
             value = re.findall("\"(.+)\"", value)[0]
             result[test] = value
@@ -30,10 +31,10 @@ def writeResult(reportPath, writeFile):
 
 if __name__ == "__main__":
     if os.sep == "\\":
-        reportPath = r"C\apiautotest-web\report.html"
-        writeFile = r"C:\\apiautotest-web\my_props.properties"
+        reportPath = r"D:\\jenkins\workspace\autotest\report\2020-05-15 15_40_54测试报告.html"
+        writeFile = r"D:\\jenkins\workspace\autotest\my_props.properties"
     else:
-        reportPath = r"/webManger/report.html"
-        writeFile = r"/apiAutoTest/my_props.properties"
+        reportPath = r"/report/2020-05-15 15_40_54测试报告.html"
+        writeFile = r"/autotest/my_props.properties"
 
     writeResult(reportPath, writeFile)

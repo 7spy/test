@@ -5,12 +5,13 @@
 @FileName: run.py
 @IDE     : PyCharm
 """
+import os
 import time
 import unittest
 from BeautifulReport import BeautifulReport
 from common import sendEmail
 from getRootPath import root_dir
-import os
+from getNewReport import getReport
 
 
 def run():

@@ -11,7 +11,7 @@ import unittest
 from BeautifulReport import BeautifulReport
 from common import sendEmail
 from getRootPath import root_dir
-from getNewReport import getReport
+from common import getNewReport
 
 
 def run():
@@ -32,4 +32,4 @@ def run():
 
 if __name__ == "__main__":
    run()
-   getReport()
+   getNewReport.getReport()

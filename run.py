@@ -18,18 +18,18 @@ def run():
     test_dir = os.path.join(root_dir, "cases")
     reportPath = os.path.join(root_dir, "report")
     discover = unittest.defaultTestLoader.discover(test_dir, pattern='test_*.py', top_level_dir=None)
-    now = time.strftime("%Y-%m-%d %H_%M_%S_")
+    now = time.strftime("%Y-%m-%d_%H_%M_%S")
     reportName = now + '测试报告.html'
     description = "python接口自动化测试报告"
     BeautifulReport(discover).report(filename=reportName, description=description, report_dir=reportPath)
     print(discover)
-    report = os.path.join(reportPath, reportName)
+    #report = os.path.join(reportPath, reportName)
 
     # 发送邮件
     #sendEmail.email(report)
-
+    getNewReport.getReport()
 
 
 if __name__ == "__main__":
    run()
-   getNewReport.getReport()
+

@@ -21,8 +21,9 @@ def getReport():
     time.sleep(2)
     before_rename_file = "%s\\%s" % (file_path, report)
     after_rename_file = "%s\\report.html" % file_path
+
     if os.path.exists(after_rename_file):
-        os.remove(after_rename_file)
+       os.remove(after_rename_file)
     os.rename(before_rename_file, after_rename_file)
 
 

@@ -12,6 +12,7 @@ from BeautifulReport import BeautifulReport
 from common import sendEmail
 from getRootPath import root_dir
 from common import getNewReport
+from common import readReport
 
 
 def run():
@@ -28,6 +29,9 @@ def run():
     # 发送邮件
     #sendEmail.email(report)
     getNewReport.getReport()
+    report = os.path.join(reportPath, reportName)
+    writeFile = os.path.join(root_dir, "my_props.properties")
+    readReport.writeResult(report, writeFile)
 
 
 if __name__ == "__main__":

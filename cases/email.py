@@ -1,6 +1,6 @@
 # -*- coding:UTF-8-*-
 # Author: dx
-from urllib import request
+from urllib3 import requests
 import json
 
 access_token = "xxx"

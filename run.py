@@ -9,9 +9,9 @@ import os
 import time
 import unittest
 from BeautifulReport import BeautifulReport
-from common import sendEmail
+#from common import sendEmail
 from getRootPath import root_dir
-from common import getNewReport
+#from common import getNewReport
 from common import readReport
 
 
@@ -24,11 +24,15 @@ def run():
     description = "python接口自动化测试报告"
     BeautifulReport(discover).report(filename=reportName, description=description, report_dir=reportPath)
     print(discover)
-    #report = os.path.join(reportPath, reportName)
 
-    # 发送邮件
+
+    # 发送邮件(用脚本发邮件，已改成jenkins构建自动发邮件)
     #sendEmail.email(report)
-    getNewReport.getReport()
+
+    # tomcat目录从.jenkins目录获取测试报告（windows下拉取测试报告，linux直接用命令拉取）
+    #getNewReport.getReport()
+
+    # 读测试报告中的参数，写入邮件模板中
     report = os.path.join(reportPath, reportName)
     writeFile = os.path.join(root_dir, "my_props.properties")
     readReport.writeResult(report, writeFile)

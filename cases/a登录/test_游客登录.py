@@ -17,7 +17,7 @@ from getRootPath import root_dir
 from common.writeLog import writeLog
 import os
 from common.send import sendRequest
-import time
+
 
 
 @ddt
@@ -37,7 +37,7 @@ class test_游客登录(unittest.TestCase):
         cls.token_dict = {}
 
         # 拼接接口地址
-#       cls.url = confParam("hostName")
+        #cls.url = confParam("hostName")
 
         cls.url = confParam("hostName") + cls.uri
         #print(cls.url)

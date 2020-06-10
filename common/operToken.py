@@ -22,7 +22,7 @@ def read_token():
 
 
 if __name__ == "__main__":
-	# token = "12345"
-	# write_file(token)
+	#token = "12345"
+	#write_file(token)
 	print(read_token()["cookie"])
 

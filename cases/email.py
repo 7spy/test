@@ -1,6 +1,7 @@
 # -*- coding:UTF-8-*-
 # Author: dx
-from urllib3 import requests
+import urllib3
+import requests
 import json
 
 access_token = "xxx"
@@ -32,8 +33,8 @@ def send_msg(mobile, item_name):
     print(json_data)
     header_encoding = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko',
                        "Content-Type": "application/json"}
-    req = request.Request(url=url, data=json_data, headers=header_encoding)
-    res = request.urlopen(req)
+    req = requests.Request(url=url, data=json_data, headers=header_encoding)
+    res = requests.urlopen(req)
     res = res.read()
     print(res.decode(encoding='utf-8'))
 

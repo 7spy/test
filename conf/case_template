@@ -22,8 +22,7 @@ class test_%s(unittest.TestCase):
     oper_yaml = operYaml(yaml_path)
     case_list,method,uri = oper_yaml.caseList()
 
-    #method = case_list[0]["method"]
-    #uri = case_list[1]["uri"]
+
 
     # 跳过说明
     reason = confParam("skip_reason")

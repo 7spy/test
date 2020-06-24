@@ -1,0 +1,32 @@
+method: get
+uri: /api/scratchcard/generate
+
+传入正确ck和8体力卡:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":"10001"}
+  check:
+    status: '100'
+    message: ok
+
+传入正确ck和16体力卡:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":"10002"}
+  check:
+    status: '100'
+    message: ok
+
+传入不存在的ck:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw","cardid":"10001"}
+  check:
+    status: '102'
+    message: 请登录
+
+传入ck为空:
+  data: {"ck": "","cardid":"10001"}
+  check:
+    status: '102'
+    message: 请登录
+
+传入正确ck和卡号id为空:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":""}
+  check:
+    status: '99'
+    message: 'System is overloaded, please take a break and retry later'

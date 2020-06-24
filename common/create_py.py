@@ -39,12 +39,12 @@ def create_py(yamlDir="", whichYaml=None, pyPath=""):
         # 获取用例名称，并将名称的首字母大写
         class_name = os.path.split(file)[-1].replace('.yaml', '').capitalize()
 
-        name = class_name.split("_")[0]
-        name = re.split("\d", name)[-1]
+        #name = class_name.split("_")[0]
+        #name = re.split("\d", name)[-1]
 
         # case_template中3个s%的取值
         dire.append(fileName)
-        py_content = src_content % (name, str(dire), name)
+        py_content = src_content % (class_name, str(dire), class_name)
         casePath = os.path.join(setting.CASE_PATH, pyPath)
 
         # case目录下创建python文件
@@ -61,9 +61,9 @@ def create_py(yamlDir="", whichYaml=None, pyPath=""):
 
 
 if __name__ == "__main__":
-    yamlPath = "登录"  # yamlCase下面模块路径，为空表示选择的yaml文件yamlCase根目录下*.yaml文件
+    yamlPath = "loading"  # yamlCase下面模块路径，为空表示选择的yaml文件yamlCase根目录下*.yaml文件
     whichYaml = None  # None yamlPath 目录下所有的yaml文件都生成py,1表示目录下第一个文件
-    pyPath = "a登录"        # case下面模块路径,为空表示生成py文件放在case根目录
+    pyPath = "loading"        # case下面模块路径,为空表示生成py文件放在case根目录
     create_py(yamlPath, whichYaml, pyPath)
 
 

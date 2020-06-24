@@ -31,4 +31,4 @@ CASE_TEMPLATE = os.path.join(BASE_PATH, 'conf', 'case_template')
 
 
 if __name__ == "__main__":
-    print(CASE_PATH)
+    print(CASE_PATH,root_dir)

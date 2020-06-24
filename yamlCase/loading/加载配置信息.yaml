@@ -1,0 +1,20 @@
+method: get
+uri: /api/loading/config
+
+传入版本号和应用宝渠道id:
+  data: {"version": "1.0.4","channel":"10000"}
+  check:
+    status: '100'
+    message: ok
+
+传入版本号为空和渠道id:
+  data: {"version": "","channel":"10000"}
+  check:
+    status: '20000'
+    message: 'Network error, please retry later'
+
+传入版本号和渠道id为空:
+  data: {"version": "1.0.4","channel":""}
+  check:
+    status: '20000'
+    message: 'Network error, please retry later'

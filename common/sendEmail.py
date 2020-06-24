@@ -14,7 +14,7 @@ from email.mime.application import MIMEApplication
 
 
 username = '420578354@qq.com'
-password = "bwnyklnkmvatcbdi"
+password = "ptuirqfgtucqbhbh"
 sender = username
 receivers = ['coin_wangqn@outlook.com']
 smtp_server ='smtp.qq.com'
@@ -58,5 +58,5 @@ def email(report):
 
 
 if __name__ == "__main__":
-	re=r'E:\freeAutoTest-master\report\2020-04-30 17_43_00测试报告.html'
+	re=r'E:\freeAutoTest-master\report\2020-05-26_14_58_54测试报告.html'
 	email(re)

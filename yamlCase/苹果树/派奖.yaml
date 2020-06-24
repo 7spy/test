@@ -1,0 +1,20 @@
+method: get
+uri: /api/scratchcard/open/batch
+
+传入正确ck:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw=="}
+  check:
+    status: '100'
+    message: ok
+
+传入不存在的ck:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw"}
+  check:
+    status: '102'
+    message: 请登录
+
+传入ck为空:
+  data: {"ck": ""}
+  check:
+    status: '102'
+    message: 请登录

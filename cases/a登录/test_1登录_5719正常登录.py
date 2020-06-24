@@ -19,7 +19,7 @@ import os
 from common.send import sendRequest
 import time 
 
-
+@unittest.skip('强制性跳过')
 @ddt
 class test_登录(unittest.TestCase):
     yaml_path = os.path.join(root_dir, "yamlCase", "登录", "游客登录.yaml")
@@ -37,7 +37,7 @@ class test_登录(unittest.TestCase):
         cls.token_dict = {}
 
         # 拼接接口地址
-#        cls.url = confParam("hostName")
+        #cls.url = confParam("hostName")
 
         cls.url = confParam("hostName") + cls.uri
         cls.client = sendRequest()

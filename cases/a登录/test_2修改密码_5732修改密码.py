@@ -16,7 +16,7 @@ from common.readYaml import operYaml
 from getRootPath import root_dir
 from common.writeLog import writeLog
 
-
+@unittest.skip('强制性跳过')
 @ddt
 class test_修改密码(unittest.TestCase):
     yaml_path = os.path.join(root_dir, "yamlCase", "登录", "2修改密码_5732修改密码.yaml")

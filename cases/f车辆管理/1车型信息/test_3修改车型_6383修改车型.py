@@ -15,6 +15,7 @@ from common.send import sendRequest
 from getRootPath import root_dir
 
 
+@unittest.skip('强制性跳过')
 @ddt
 class test_修改车型(unittest.TestCase):
     yaml_path = os.path.join(root_dir, "yamlCase", "车辆管理", "3修改车型_6383修改车型.yaml")

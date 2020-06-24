@@ -1,0 +1,26 @@
+method: get
+uri: /api/draw_money/draw_money
+
+传入正确ck和提款金额，提款成功:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","money":"0.4"}
+  check:
+    status: '100'
+    message: ok
+
+传入不存在的ck和提款金额:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw","money":"0.4"}
+  check:
+    status: '102'
+    message: 请登录
+
+传入ck为空和提款金额:
+  data: {"ck": "","money":"0.4"}
+  check:
+    status: '102'
+    message: 请登录
+
+传入正确ck和提款金额为空:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","money":""}
+  check:
+    status: '99'
+    message: 'System is overloaded, please take a break and retry later'

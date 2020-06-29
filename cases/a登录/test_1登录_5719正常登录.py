@@ -17,12 +17,13 @@ from getRootPath import root_dir
 from common.writeLog import writeLog
 import os
 from common.send import sendRequest
-import time 
+import time
+
 
 @unittest.skip('强制性跳过')
 @ddt
 class test_登录(unittest.TestCase):
-    yaml_path = os.path.join(root_dir, "yamlCase", "登录", "游客登录.yaml")
+    yaml_path = os.path.join(root_dir, "yamlCase", "登录", "1登录_5719正常登录.yaml")
     oper_yaml = operYaml(yaml_path)
     case_list,method,uri = oper_yaml.caseList()
 

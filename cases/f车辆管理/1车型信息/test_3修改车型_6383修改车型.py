@@ -20,10 +20,7 @@ from getRootPath import root_dir
 class test_修改车型(unittest.TestCase):
     yaml_path = os.path.join(root_dir, "yamlCase", "车辆管理", "3修改车型_6383修改车型.yaml")
     oper_yaml = operYaml(yaml_path)
-    case_list = oper_yaml.caseList()
-
-    method = case_list[0]["method"]
-    uri = case_list[1]["uri"]
+    case_list, method, uri = oper_yaml.caseList()
 
     # 跳过说明
     reason = confParam("skip_reason")

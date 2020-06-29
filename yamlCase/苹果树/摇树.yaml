@@ -1,17 +1,23 @@
 method: get
 uri: /api/scratchcard/generate
 
-传入正确ck和8体力卡:
+传入正确ck和20体力卡:
   data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":"10001"}
   check:
     status: '100'
     message: ok
 
-传入正确ck和16体力卡:
+传入正确ck和40体力卡:
   data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":"10002"}
   check:
     status: '100'
     message: ok
+
+传入正确ck和40体力卡，体力不足:
+  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":"10002"}
+  check:
+    status: '177'
+    message: 'Insufficient Power'
 
 传入不存在的ck:
   data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw","cardid":"10001"}

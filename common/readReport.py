@@ -31,10 +31,10 @@ def writeResult(reportPath, writeFile):
 
 if __name__ == "__main__":
     if os.sep == "\\":
-        reportPath = r"C:\\Users\\Administrator.WANGQN-PC\\.jenkins\\workspace\\autotest\\report\\2020-05-26_14_07_52测试报告.html"
+        reportPath = r"E:\\freeAutoTest-master\\report\\2020-06-24_16_05_56测试报告.html"
         writeFile = r"C:\\Users\\Administrator.WANGQN-PC\\.jenkins\\workspace\\autotest\\my_props.properties"
     else:
-        reportPath = r"/report/2020-05-26_14_07_52测试报告.html"
+        reportPath = r"/report/2020-06-24_16_05_56测试报告.html"
         writeFile = r"/autotest/my_props.properties"
 
     writeResult(reportPath, writeFile)

@@ -19,6 +19,7 @@ def run():
     test_dir = os.path.join(root_dir, "cases")
     reportPath = os.path.join(root_dir, "report")
     discover = unittest.defaultTestLoader.discover(test_dir, pattern='test_*.py', top_level_dir=None)
+    print(discover)
     now = time.strftime("%Y-%m-%d_%H_%M_%S")
     reportName = now + '测试报告.html'
     description = "python接口自动化测试报告"

@@ -2,13 +2,13 @@ method: get
 uri: /api/signin/signin
 
 传入正确ck和日期:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","day":"20200623"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","day":"20200623"}
   check:
     status: '100'
     message: ok
 
 传入不存在的ck和日期:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw","day":"20200623"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg","day":"20200623"}
   check:
     status: '102'
     message: 请登录
@@ -20,7 +20,7 @@ uri: /api/signin/signin
     message: 请登录
 
 传入正确ck和日期为空:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","day":""}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","day":""}
   check:
     status: '99'
     message: 'System is overloaded, please take a break and retry later'

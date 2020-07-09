@@ -2,19 +2,19 @@ method: get
 uri: /api/draw_money/draw_money
 
 传入正确ck和提款金额，提款成功:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","money":"50"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","money":"0.5"}
   check:
     status: '100'
     message: ok
 
 传入正确ck和提款金额，余额不足:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","money":"100"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","money":"100"}
   check:
     status: '178'
     message: '余额不足'
 
 传入不存在的ck和提款金额:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw","money":"50"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg","money":"50"}
   check:
     status: '102'
     message: 请登录
@@ -26,7 +26,7 @@ uri: /api/draw_money/draw_money
     message: 请登录
 
 传入正确ck和提款金额为空:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","money":""}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","money":""}
   check:
     status: '99'
     message: 'System is overloaded, please take a break and retry later'

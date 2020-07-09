@@ -1,7 +1,7 @@
 # coding=utf-8 
 """
-@Time    : 2018/05/25  上午 9:34
-@Author  : hzsyy
+@Time    : 2020/07/08  下午 14:42
+@Author  : wangqn
 @FileName: readConfig.py
 @IDE     : PyCharm
 """

@@ -2,13 +2,13 @@ method: get
 uri: /api/draw_money/homepage
 
 传入正确的ck:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw=="}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg=="}
   check:
     status: '100'
     message: ok
 
 传入不存在的ck:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg"}
   check:
     status: '102'
     message: 请登录

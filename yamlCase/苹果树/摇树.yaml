@@ -2,25 +2,25 @@ method: get
 uri: /api/scratchcard/generate
 
 传入正确ck和20体力卡:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":"10001"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","cardid":"10001"}
   check:
     status: '100'
     message: ok
 
 传入正确ck和40体力卡:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":"10002"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","cardid":"10002"}
   check:
     status: '100'
     message: ok
 
 传入正确ck和40体力卡，体力不足:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":"10002"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","cardid":"10002"}
   check:
     status: '177'
     message: 'Insufficient Power'
 
 传入不存在的ck:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw","cardid":"10001"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg","cardid":"10001"}
   check:
     status: '102'
     message: 请登录
@@ -32,7 +32,7 @@ uri: /api/scratchcard/generate
     message: 请登录
 
 传入正确ck和卡号id为空:
-  data: {"ck": "MTI4MDU0ZTlhNTIzNzFmOGM1MTljMDViYzA2YmZhMDQ1MjJlMw==","cardid":""}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","cardid":""}
   check:
     status: '99'
     message: 'System is overloaded, please take a break and retry later'

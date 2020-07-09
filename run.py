@@ -1,7 +1,7 @@
 # coding=utf-8 
 """
-@Time    : 2019/12/24  下午 14:42
-@Author  : hzsyy
+@Time    : 2020/07/08  下午 14:42
+@Author  : wangqn
 @FileName: run.py
 @IDE     : PyCharm
 """
@@ -13,11 +13,22 @@ from BeautifulReport import BeautifulReport
 from getRootPath import root_dir
 #from common import getNewReport
 from common import readReport
+from common.readConfig import confParam
+from common.dataBase import dataBase
+
 
 
 def run():
     test_dir = os.path.join(root_dir, "cases")
     reportPath = os.path.join(root_dir, "report")
+
+    dbName = confParam('db')
+    db = dataBase(dbName)
+    db.update_power("t_user_power", 12805)
+    db.update_money("t_user_money", 12805)
+    db.delete_money_list("t_user_status", 12805)
+    db.closeDb()
+
     discover = unittest.defaultTestLoader.discover(test_dir, pattern='test_*.py', top_level_dir=None)
     print(discover)
     now = time.strftime("%Y-%m-%d_%H_%M_%S")

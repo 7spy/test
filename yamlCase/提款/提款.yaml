@@ -8,7 +8,7 @@ uri: /api/draw_money/draw_money
     message: ok
 
 传入正确ck和提款金额，余额不足:
-  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","money":"100"}
+  data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg==","money":"200"}
   check:
     status: '178'
     message: '余额不足'

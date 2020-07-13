@@ -1,9 +1,9 @@
 # encoding: utf-8
 
 """
-@author: shaoyanyan
+@author: wangqn
 @file: check.py
-@time: 2020/2/19 19:12
+@time: 2020/7/10 19:12
 @ide: pycharm
 
 """

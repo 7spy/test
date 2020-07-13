@@ -1,3 +1,10 @@
+# coding=utf-8
+"""
+@Time : 2020/07/08 10:12
+@Author : wangqn
+@FileName : readReport.py
+@IDE : PyCharm
+"""
 import os
 import time
 from getRootPath import root_dir

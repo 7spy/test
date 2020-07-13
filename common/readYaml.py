@@ -1,7 +1,7 @@
 # coding=utf-8 
 """
-@Time    : 2018/05/28  下午 1:38
-@Author  : hzsyy
+@Time    : 2020/07/08  下午 14:42
+@Author  : wangqn
 @FileName: readYaml.py
 @IDE     : PyCharm
 """

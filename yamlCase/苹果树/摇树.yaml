@@ -19,13 +19,13 @@ uri: /api/scratchcard/generate
     status: '177'
     message: 'Insufficient Power'
 
-传入不存在的ck:
+传入不存在的ck和20体力卡:
   data: {"ck": "MTI4MDU1Y2QxMWJkNTFlYWYwNjNmODg4YWZiZDliYjg0NGRiNg","cardid":"10001"}
   check:
     status: '102'
     message: 请登录
 
-传入ck为空:
+传入ck为空和20体力卡:
   data: {"ck": "","cardid":"10001"}
   check:
     status: '102'

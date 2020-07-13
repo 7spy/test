@@ -1,7 +1,7 @@
 # coding=utf-8
 """
-@Time    : 2020/02/13  下午 2:51
-@Author  : hzsyy
+@Time    : 2020/07/08  下午 14:42
+@Author  : wangqn
 @FileName: client.py
 @IDE     : PyCharm
 """

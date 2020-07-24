@@ -53,7 +53,7 @@ class test_提款(unittest.TestCase):
         # 接口返回文本信息
         text = response.text
 
-        # 把文本信息转化为字典格式
+        # 把文本信息字符串格式转化为字典格式
         text_dict = json.loads(text)
 
         # 写日志

@@ -2,7 +2,7 @@
 """
 @Time    : 2020/07/08  下午 14:42
 @Author  : wangqn
-@FileName: client.py
+@FileName: send.py
 @IDE     : PyCharm
 """
 import json

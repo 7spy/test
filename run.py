@@ -15,7 +15,7 @@ from getRootPath import root_dir
 from common import readReport
 from common.readConfig import confParam
 from common.dataBase import dataBase
-
+from common.Wechat import WechatAlert
 
 
 def run():
@@ -49,6 +49,11 @@ def run():
     writeFile = os.path.join(root_dir, "my_props.properties")
     readReport.writeResult(report, writeFile)
 
+    # 发送企业微信提醒
+    corpid='wx8d3e67cf49434a0f'
+    corpsecret='g4b6P5-QsZAdov-R4Ha7fv1RX26QSLnFEKjMCp4R3HM'
+    alert = WechatAlert(corpid,corpsecret)
+    alert.send_msg("接口自动化测试已完成，本次报告详情请查看：http://10.0.0.239:8080/examples/report/report.html")
 
 if __name__ == "__main__":
    run()

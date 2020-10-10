@@ -15,7 +15,8 @@ def send_msg(mobile, item_name):
      :param itemName:
      :return:
     """
-    url = "https://oapi.dingtalk.com/robot/send?access_token=6bfc67fbdcdc3e2ea38e11d77a1d1f378188479102fcfcda53686debac0297aa"      # 钉钉中webhook的值进行拼接
+    # 钉钉中webhook的值进行拼接
+    url = "https://oapi.dingtalk.com/robot/send?access_token=6bfc67fbdcdc3e2ea38e11d77a1d1f378188479102fcfcda53686debac0297aa"
     data = {
         "msgtype": "text",
         "text": {
@@ -40,6 +41,6 @@ def send_msg(mobile, item_name):
 
 
 if __name__ == "__main__":
-    mobile = "*******"     # 需要艾特的人员钉钉对应的手机号码
+    mobile = "*******"  # 需要艾特的人员钉钉对应的手机号码
     item_name = "test"
     send_msg(mobile, item_name)

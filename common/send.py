@@ -65,7 +65,7 @@ class sendRequest(object):
             else:
                 # 如果无参数，访问方式如下
                 # 返回request的Response结果，类型为requests的Response类型
-                res = requests.put(url,)
+                res = requests.put(url, )
             return res
         else:
             print("无效的请求方式，get/post/put/delete,请查找原因！！！")
@@ -76,6 +76,5 @@ if __name__ == "__main__":
     client = sendRequest()
     headers = {"Content-Type": "application/json;charset=UTF-8"}
     params = {"account": "18042477732", "userPwd": "admin123!@#$"}
-    response = client.sendRequest("post", url, headers, params)
+    response = client.sendRequest("post", url,  params)
     print(response.text)
-

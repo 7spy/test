@@ -20,9 +20,7 @@ class test_提款(unittest.TestCase):
     for dir in yamlPath:
         yaml_path = os.path.join(yaml_path, dir)
     oper_yaml = operYaml(yaml_path)
-    case_list,method,uri = oper_yaml.caseList()
-
-
+    case_list, method, uri = oper_yaml.caseList()
 
     # 跳过说明
     reason = confParam("skip_reason")
@@ -35,7 +33,7 @@ class test_提款(unittest.TestCase):
         cls.client = sendRequest()
 
         # 请求信息头
-        #cls.headers = {"Cookie": read_token()["cookie"], "Content-Type": "application/json;charset=UTF-8"}
+        # cls.headers = {"Cookie": read_token()["cookie"], "Content-Type": "application/json;charset=UTF-8"}
 
     # case_list传进去做数据驱动
     @data(*case_list)

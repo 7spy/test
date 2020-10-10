@@ -18,7 +18,7 @@ def create_py(yamlDir="", whichYaml=None, pyPath=""):
     # 读取CASE_TEMPLATE文件
     with open(setting.CASE_TEMPLATE, encoding='utf-8') as fr:
         src_content = fr.read()
-    dire = yamlDir.split("\\")
+    dire = yamlDir.split("\\")  # str.split()返回分割后的字符串列表，默认分隔符为所有的空字符，包括空格、换行（\n）、制表符（\t）等
     print(dire)
     if len(yamlDir.split("\\")) > 1:
         yamlDir, secondDir = yamlDir.split("\\")
@@ -28,6 +28,7 @@ def create_py(yamlDir="", whichYaml=None, pyPath=""):
 
     all_file = glob.glob(yamlPath + os.sep + '*.yaml')
     print(all_file)
+
     if whichYaml:
         all_file = [all_file[whichYaml-1]]
     else:

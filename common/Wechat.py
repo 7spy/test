@@ -10,23 +10,24 @@ import json
 
 class WechatAlert():
     def __init__(self,corpid,corpsecret):
+
         self.url = 'https://qyapi.weixin.qq.com/cgi-bin/gettoken'
         self.corpid = corpid
         self.corpsecret = corpsecret
 
     def get_token(self):
-        #获取token时，携带企业id和secret(注册企业号时，后台可查)
+        # 获取token时，携带企业id和secret(注册企业号时，后台可查)
         url = self.url
         values = {'corpid': self.corpid,
                   'corpsecret': self.corpsecret,
                   }
         req = requests.get(url, params=values)
         response = json.loads(req.text)
-        #print('response:%s' %response)
+        # print('response:%s' %response)
         return response["access_token"]
 
     def send_msg(self, values):
-        #给单个人发送，也可以发送给多个人，但是不是一个群，"touser" : "wangqn","agentid":"1000005",
+        # 给单个人发送，也可以发送给多个人，但是不是一个群，"touser" : "wangqn","agentid":"1000005",
         url = "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=" + self.get_token()
         send_values = {"touser": "wangqn|wangwq|wangsh|wanl",
             "toparty": "",
@@ -41,7 +42,7 @@ class WechatAlert():
 
         a = requests.post(url, json=send_values)
         a = json.loads(a.text)
-        #print(a)
+        # print(a)
 
 
 if __name__ == '__main__':
